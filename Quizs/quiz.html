@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" href="../images/quizIcon.ico" type="image/x-icon"/>
+    <title>Quiz AppLication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body" onload="getTimer()">
+  
+ 
+  <div id="Page2" class="page container" >
+        <div class="two">
+            <header class="mainHeader">
+                <div class="logo">
+                    <p>Quiz Application</p>
+                </div>
+                <div class="timerSet" id="timerSet" >
+                <span id="timer" class="time">
+                        Time :
+                          <span id="time" class="timer"></span>
+                    </span>
+                </div>
+                <div class="result-title">
+                    <p>Quiz Title : Javascript Quiz 1</p>
+                    <hr>
+                </div>
+            </header>
+			
+            <div class="SecondPage" id="Quiz_Container">
+                <div class="Question1">
+                    <p id="Question"></p>
+                </div>
+    <div class="Question1-Options">
+        <label > <input type="radio" name="option" value="1"> <span id="Option1"></span> </label></br>
+        <label > <input type="radio" name="option" value="2"> <span id="Option2"></span> </label></br>
+        <label > <input type="radio" name="option" value="3"> <span id="Option3"></span> </label></br>
+        <label > <input type="radio" name="option" value="4"> <span id="Option4"></span> </label></br>           
+    </div>
+    <div class="next-button">
+     <button id="NextButton" onclick="loadNextQuestion ()">Next</button>
+    </div>
+    </div>
+	
+
+	 <div id="Position" class="result" style="display:none;">
+	 </div>
+	 
+	<div id="Result"  style="display:none;">
+		<div class="result-score">
+                    <h6>Score</h6>
+                    <p id="percent"></p>
+                </div>
+                <div class="result-correct">
+                    <h6>Correct</h6>
+                    <p id="correct"></p>
+                </div>
+	</div>
+    
+    <button onclick="logOut()" id="logOutButton" class="buttonlo"   style="display:none;"> LogOut </button>
+        </div>
+    </div> 
+
+</body>
+<script src="Quiz-Question.js"></script>
+<script src="Question-Functionality.js"></script>
+</html>

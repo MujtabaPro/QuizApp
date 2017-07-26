@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" href="images/quizIcon.ico" type="image/x-icon"/>
+    <title>Quiz AppLication</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+    
+<!--YE Courses ka PAGEEEEE hai Complete hai ye-->
+        <div id="course" class="page" style="display:none">
+            <div class="two">
+                <header class="mainHeader">
+                    <div class="logo">
+                        <p>Quiz Application</p>
+                    </div>
+                    <div class="login">
+                        <!--<button onclick="show('Page1');">Login</button>-->
+                    </div>
+                </header>
+                <div class="main-Courses">
+                    <div class="userName">
+                        <p>Welcome <span id="usrName"></span></p>
+                    </div>
+                    <div class="recommended-Course">
+                        <p>Course's</p>
+                    </div>
+                    <div class="recommended-Course-content">
+                        <p>JavaScript</p> <button onclick="show('HTML5');">Join</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+ <div id="HTML5" class="page" style="display:none">
+        <div class="two">
+            <header class="mainHeader">
+                <div class="logo">
+                    <p>Quiz Application</p>
+                </div>
+                <div class="login">
+                    <!--<button onclick="show('Page1');">Login</button>-->
+                </div>
+            </header>
+            <div class="HTML-Course-left-side">
+                <div class="HTML-Course-left-side-top-content">
+                    <p>Class: Saylani Batch 4.1</p>
+                </div>
+                <div class="Plus-HTML5">
+                    <span onclick="show('HTML5-into')">+</span><p onclick="show('HTML5-into')">JavaScript</p>
+                </div>
+            </div>
+            <div class="HTML-Course-right-side">
+                <p>Welcome to JavaScript Quiz 1</p>
+            </div>
+        </div>
+    </div>
+
+
+  <div id="HTML5-into" class="page" style="display:none">
+        <div class="two">
+            <header class="mainHeader">
+                <div class="logo">
+                    <p>Quiz Application</p>
+                </div>
+                <div class="login">
+                    <!--<button onclick="show('Page1');">Login</button>-->
+                </div>
+            </header>
+            <div class="HTML-Course-left-side">
+                <div class="HTML-Course-left-side-top-content">
+                    <p>Class: Saylani Batch 4.1</p>
+                </div>
+                <div class="Minus-HTML5">
+                    <span onclick="show('HTML5')">-</span><p onclick="show('HTML5')">Javascript</p>
+                </div>
+                <div class="HTML5-quiz">
+                    <p onclick="show('HTML-test-button')">Javascript Quiz 1</p>
+                </div>
+            </div>
+            <div class="HTML-Course-right-side">
+                <p =>Welcome to Javascript Quiz 1</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="HTML-test-button" class="page" style="display:none">
+        <div class="two">
+            <header class="mainHeader">
+                <div class="logo">
+                    <p>Quiz Application</p>
+                </div>
+                <div class="login">
+                    <!--<button onclick="show('Page1');">Login</button>-->
+                </div>
+            </header>
+            <div class="HTML-Course-left-side">
+                <div class="HTML-Course-left-side-top-content">
+                    <p>Class: Saylani Batch 4.1</p>
+                </div>
+                <div class="Minus-HTML5">
+                    <span onclick="show('HTML5')">-</span><p onclick="show('HTML5')">Javascript</p>
+                </div>
+                <div class="HTML5-quiz">
+                    <p onclick="show('HTML-test-button')">Javascript Quiz 1</p>
+                </div>
+            </div>
+            <div class="HTML-Course-right-side">
+                <p>Welcome to JS Quiz 1</p>
+                <div class="HTML5-quiz-title">
+                    <p>Quiz Title : Js Quiz 1</p>
+                    <p>Description :</p>
+                    <span>First Quiz for Javascript which covers Introduction to Javascript from Smater away Learn JavaScript</span>
+                    <p>Passing Score : 60</p>
+                    <p>Quiz Duration : Only 3Mintes</p>
+                    <p>No. of Attempts Allowed : 1</p>
+                    <button onclick="show('HTML5-test-key')">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="HTML5-test-key" class="page" style="display:none">
+        <div class="two">
+            <header class="mainHeader">
+                <div class="logo">
+                    <p>Quiz Application</p>
+                </div>
+                <div class="login">
+                    <button onclick="show('Page1');">Login</button>
+                </div>
+            </header>
+            <div class="HTML5-key">
+                <h1>Quiz : Javascript Quiz 1</h1>
+                <input type="password" placeholder="Enter Quiz Key" id="key"><button onclick="key()" >Sumbit key</button>
+            </div>
+        </div>
+    </div>          
+
+
+  <div id="Page1" class="page" >
+        <div class="one">
+            <header class="mainHeader">
+                <div class="logo">
+                    <p>Quiz Application</p>
+                </div>
+                <div class="login">
+                    <button id="myBtn">Login</button>
+                    <!--<button onclick="show('Page22');">Login</button>-->
+                    
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <span class="close">&times;</span>
+                            </div>
+                            <div class="modal-body" align="center;">
+                                <aside class="modal-body-content" >
+                                    <h1>User Login</h1>
+                                    <p id="error" class="errors"></p>
+                                    <input type="text" name="name" placeholder="Enter your name" id="name" class="input-type-one"><br>                                    
+                                    <input type="email" name="email" placeholder="Enter email address" id="email" class="input-type-one"><br>
+                                    <input type="password" name="password" placeholder="Enter password" id="pass" class="input-type-one"><br>
+                                    <button onclick="Login()" class="button-login"><a href="#">Login</a></button>
+                                </aside>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <article class="mainContent">
+                <div class="content">
+                    <p> Welcome to Quiz-App</p>
+                </div>
+            </article>
+    
+            <article class="middle-content">
+                <div align="center">
+                    <aside class="icon-image" >
+                        <article  >
+                            <center> <img src="images/1.png" width="100"></center><br>
+                            <p>Top Author's</p>
+                        </article>
+                    </aside>
+                
+                    <aside class="icon-image" >
+                        <article align="center" >
+                            <center> <img src="images/3.png"  width="100"></center><br>
+                            <p>Top Group's</p>
+                        </article>
+                    </aside>
+                    <aside class="icon-image" >
+                        <article align="center" >
+                            <center> <img src="images/2.png"  width="100"></center><br>
+                            <p>Top Exam's</p>
+                        </article>
+                    </aside>
+                </div>
+            </article>
+        </div>       
+    </div>   
+
+     
+    
+</body>
+<script src="app.js"></script>
+</html>
